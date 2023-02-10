@@ -1,0 +1,27 @@
+version: '3.3'
+services:
+  keycloak:
+    build:
+      context: ./keycloak
+      dockerfile: Dockerfile
+    network_mode: host
+  myservice:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    network_mode: host
+
+  mariadb:
+    image: mariadb:latest
+    environment:
+      MYSQL_ROOT_PASSWORD: changeme
+      MYSQL_DATABASE: mydb
+      MYSQL_USER: testuser
+      MYSQL_PASSWORD: mypwd
+    network_mode: host
+    volumes:
+      - mariadb_data
+
+volumes:
+  mariadb_data:
+    driver: local
