@@ -9,7 +9,7 @@ To debug -
 * or docker-compose up, don't forget to clean up docker images and rebuild between runs as this way won't provide a live reload, use a default 'Remote JVM Debug' configuration'
 
 Actuator -
-* http://localhost:9000/actuator/
+* http://localhost:9000/actuator
 * you can also use `curl -X POST http://localhost:9000/actuator/shutdown`
 
 Swagger -

@@ -32,8 +32,13 @@ dependencies {
     implementation("org.jetbrains.kotlinx:kotlinx-coroutines-reactor")
     implementation("org.json:json:20220924")
     implementation("com.fasterxml.jackson.module:jackson-module-kotlin")
-    implementation("org.springdoc:springdoc-openapi-webflux-ui:1.6.12")
-    implementation("org.springdoc:springdoc-openapi-kotlin:1.6.12")
+//    implementation("org.springdoc:springdoc-openapi-webflux-ui:1.6.12")
+//    implementation("org.springdoc:springdoc-openapi-kotlin:1.6.12")
+
+    // https://mvnrepository.com/artifact/org.springdoc/springdoc-openapi-starter-webflux-ui
+    implementation("org.springdoc:springdoc-openapi-starter-webflux-ui:2.0.2")
+
+
     implementation("org.mariadb:r2dbc-mariadb:1.1.3")
     implementation("org.springframework.boot:spring-boot-starter-data-jdbc")
     implementation("org.liquibase:liquibase-core")
