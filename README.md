@@ -17,3 +17,6 @@ Swagger -
 * http://localhost:9000/v3/api-docs.yaml
 * http://localhost:9000/v3/api-docs
 * http://localhost:9000/webjars/swagger-ui/index.html
+
+Other -
+* run ./gradlew tasks for full list of tasks available
