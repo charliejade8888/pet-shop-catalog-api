@@ -2,11 +2,10 @@
 Reactive programming in Kotlin. CRUD REST API, Spring WebFlux and R2DBC.
 
 To start -
-* docker-compose up, don't forget to clean up docker images and rebuild between runs
+* `docker-compose up`, don't forget to clean up docker images and rebuild between runs
 
 To debug -
-* start keycloak and mariadb, then ./gradlew bootRun <br/>_spring-boot-devtools along with gardle's `assemble --continuous
-` task in a seperate terminal will automatically load changes to running app, as soon as you run the assemble task_
+* start keycloak and mariadb, <br>`./gradlew bootRun` and then <br>`./gradlew assemble --continuous` in a seperate terminal <br>now _springboot-dev-tools_ will automatically load changes live.
 * or docker-compose up, don't forget to clean up docker images and rebuild between runs as this way won't provide a live reload, use a default 'Remote JVM Debug' configuration'
 
 Actuator -
@@ -19,4 +18,4 @@ Swagger -
 * http://localhost:9000/webjars/swagger-ui/index.html
 
 Other -
-* run ./gradlew tasks for full list of tasks available
+* run `./gradlew tasks` for full list of tasks available
