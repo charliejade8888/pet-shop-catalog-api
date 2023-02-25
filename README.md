@@ -1,11 +1,11 @@
-# Pet Shop Catalogue
+# Pet Shop Catalog
 Reactive programming in Kotlin. CRUD REST API, Spring WebFlux and R2DBC.
 
 To start -
 * `docker-compose up`, don't forget to clean up docker images and rebuild between runs
 
 To debug -
-* start keycloak and mariadb, <br>`./gradlew bootRun` and then <br>`./gradlew assemble --continuous` in a seperate terminal <br>now _springboot-dev-tools_ will automatically load changes live.
+* start keycloak and mariadb, <br>`./gradlew bootRun` and then <br>`./gradlew assemble --continuous` in a seperate terminal <br>now _springboot-dev-tools_ will hot reload any changes
 * or docker-compose up, don't forget to clean up docker images and rebuild between runs as this way won't provide a live reload, use a default 'Remote JVM Debug' configuration'
 
 Actuator -
@@ -19,3 +19,4 @@ Swagger -
 
 Other -
 * run `./gradlew tasks` for full list of tasks available
+* run `./gradlew cucumber` for out of process component test (BAT)
