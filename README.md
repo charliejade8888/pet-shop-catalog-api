@@ -18,5 +18,5 @@ Swagger -
 * http://localhost:9000/webjars/swagger-ui/index.html
 
 Other -
-* run `./gradlew tasks` for full list of tasks available
-* run `./gradlew cucumber` for out of process component test (BAT)
+* `./gradlew tasks` for full list of tasks available
+* `./gradlew cucumber` for out of process component test (BAT)
