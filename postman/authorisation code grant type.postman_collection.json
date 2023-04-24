@@ -1,9 +1,10 @@
 {
 	"info": {
-		"_postman_id": "723dd9fe-fec1-47e2-a352-5717719c4214",
+		"_postman_id": "0b0c4b8f-2dfe-4179-baa6-45205afd8835",
 		"name": "authorisation code grant type",
 		"description": "This grant type is used where a user is involved and can enter login credentials.\n\nIt is used where the client/source code is not publicly exposed, just on a private network.\n\nThis is because the client secret is needed here and must be stored in the source code.\n\nThe client must be trusted with the \nclient_secret.",
-		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "8442851"
 	},
 	"item": [
 		{
@@ -12,12 +13,12 @@
 				"method": "GET",
 				"header": [],
 				"url": {
-					"raw": "http://localhost:8080/realms/petshoprealm/protocol/openid-connect/auth?client_id=petshopui&response_type=code&scope=openid&redirect_uri=http://localhost:8081/sample&state=notneeded",
+					"raw": "http://localhost:8180/realms/petshoprealm/protocol/openid-connect/auth?client_id=petshopui&response_type=code&scope=openid&redirect_uri=http://localhost:8081/sample&state=notneeded",
 					"protocol": "http",
 					"host": [
 						"localhost"
 					],
-					"port": "8080",
+					"port": "8180",
 					"path": [
 						"realms",
 						"petshoprealm",
@@ -93,12 +94,12 @@
 					]
 				},
 				"url": {
-					"raw": "http://localhost:8080/realms/petshoprealm/protocol/openid-connect/token",
+					"raw": "http://localhost:8180/realms/petshoprealm/protocol/openid-connect/token",
 					"protocol": "http",
 					"host": [
 						"localhost"
 					],
-					"port": "8080",
+					"port": "8180",
 					"path": [
 						"realms",
 						"petshoprealm",
