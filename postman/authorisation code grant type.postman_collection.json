@@ -49,7 +49,7 @@
 						}
 					]
 				},
-				"description": "1. Cut and paste this URL into the browser.\n2. Enter your end *user credentials into the KeyCloak login form. _It might ask you to reset the password if your user has temporary credentials *user details available from User tab in your realm._\n3. Copy the URL from the page it lands you on, then copy the code provided."
+				"description": "1. Cut and paste this URL into the browser.\n2. Enter your end \\*user credentials into the KeyCloak login form. _It might ask you to reset the password if your user has temporary credentials \\*user details available from User tab in your realm. Currently charliejade8888:dummy_\n3. Copy the URL from the page it lands you on, then copy the code provided."
 			},
 			"response": []
 		},
@@ -83,7 +83,7 @@
 						},
 						{
 							"key": "code",
-							"value": "577e6c3c-4b11-4895-af80-3260b83f6119.3a95b588-5801-4453-ab7a-8d02db6c0ea4.eed2a8b4-4895-4980-a033-a8b9ddafc804",
+							"value": "{{code}}",
 							"type": "text"
 						},
 						{

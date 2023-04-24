@@ -2,7 +2,7 @@
 	"info": {
 		"_postman_id": "3f78189c-9fc1-4b1f-bbf4-c6dc115cc47c",
 		"name": "keycloak",
-		"description": "Keycloak runs on localhost:8180\n\nUse admin:admin to log in",
+		"description": "Keycloak runs on localhost:8180\n\nUse admin:admin to log in\n\nTo modify realm, run keycloak from script using params in it's dockerfile and make changes there",
 		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
 		"_exporter_id": "8442851"
 	},
