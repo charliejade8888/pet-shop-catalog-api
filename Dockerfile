@@ -10,3 +10,4 @@ COPY ./scripts/wait-for-it.sh /wait-for-it.sh
 RUN chmod +x wait-for-it.sh
 ENTRYPOINT [ "/bin/bash", "-c" ]
 CMD ["./wait-for-it.sh 127.0.0.1:3306 --strict -t 120 -- java -jar /pet-shop-catalog-0.0.1-SNAPSHOT.jar"]
+CMD ["./wait-for-it.sh 127.0.0.1:8180 --strict -t 120 -- java -jar /pet-shop-catalog-0.0.1-SNAPSHOT.jar"]
