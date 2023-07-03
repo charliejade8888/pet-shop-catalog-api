@@ -1,7 +1,6 @@
 package com.tyrell.repositories
 
 import com.tyrell.models.Pet
-import com.tyrell.models.User
 import org.springframework.data.r2dbc.repository.Query
 import org.springframework.data.r2dbc.repository.R2dbcRepository
 import org.springframework.data.r2dbc.repository.config.EnableR2dbcRepositories

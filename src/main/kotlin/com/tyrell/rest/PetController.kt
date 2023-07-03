@@ -61,7 +61,7 @@ internal class PetController(
 
     @Operation(operationId = "deletePet", summary = "Delete pet")
     @DeleteMapping("/delete/{name}")
-    suspend fun deleteUser(
+    suspend fun deletePet(
         @PathVariable name: String
     ) {
         catalogueService.deletePet(name = name)
