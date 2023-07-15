@@ -2,10 +2,11 @@ package com.tyrell.models
 
 import com.fasterxml.jackson.databind.annotation.JsonSerialize
 import com.tyrell.responses.PetCreateResponse
+import io.swagger.v3.oas.annotations.media.Schema
 import jakarta.validation.constraints.NotNull
 import org.springframework.data.annotation.Id
 import org.springframework.data.relational.core.mapping.Table
-
+// https://stackoverflow.com/questions/59291371/migrating-from-springfox-swagger-2-to-springdoc-open-api
 @JsonSerialize
 @Table("pets")
 data class Pet(
