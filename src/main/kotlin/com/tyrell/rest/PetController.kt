@@ -41,6 +41,7 @@ internal class PetController(
         return catalogueService.findPet(petName)
     }
 
+    // https://reflectoring.io/spring-boot-paging/ -can use spring-boot paging instead as an option
     @Operation(operationId = "listPets", summary = "List pets")
     @GetMapping("/list")
     suspend fun listPets(
