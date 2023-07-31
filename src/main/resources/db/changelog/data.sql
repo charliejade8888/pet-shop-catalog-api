@@ -5,7 +5,7 @@ DROP TABLE IF EXISTS mydb.pets;
 
 CREATE TABLE mydb.pets
 (
-    id          INT AUTO_INCREMENT PRIMARY KEY,
+    id          INT AUTO_INCREMENT PRIMARY KEY, -- TODO remove and use name as PK
     name        VARCHAR(250) NOT NULL,
     description VARCHAR(250) NOT NULL,
     breed       VARCHAR(250) NOT NULL,

@@ -2,6 +2,7 @@ import org.jetbrains.kotlin.gradle.dsl.KotlinJvmProjectExtension
 import org.jetbrains.kotlin.gradle.tasks.KotlinCompile
 
 plugins {
+    id("org.jetbrains.kotlinx.kover") version "0.7.3"
     id("io.gitlab.arturbosch.detekt") version "1.22.0-RC3"
     id("org.springframework.boot") version "3.0.0"
     id("io.spring.dependency-management") version "1.1.0"
@@ -99,4 +100,16 @@ val cucumber = task<Test>("cucumber") {
 
 tasks.withType<Jar>() {
     duplicatesStrategy = DuplicatesStrategy.EXCLUDE
+}
+
+koverReport {
+    filters {
+        excludes {
+            // exclusion rules - classes to exclude from report
+            classes("at.*")
+        }
+        includes {
+            // inclusion rules - classes only those that will be present in reports
+        }
+    }
 }

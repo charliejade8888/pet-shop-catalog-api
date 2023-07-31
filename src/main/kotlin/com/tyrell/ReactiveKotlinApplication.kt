@@ -10,6 +10,7 @@ import org.springframework.boot.runApplication
 description = "Documentation of the Pet Shop Catalogue API v1.0")
 )
 class ReactiveKotlinApplication
+
 fun main(args: Array<String>) {
-	runApplication<ReactiveKotlinApplication>(*args)
+    runApplication<ReactiveKotlinApplication>(*args)
 }
