@@ -102,14 +102,16 @@ tasks.withType<Jar>() {
     duplicatesStrategy = DuplicatesStrategy.EXCLUDE
 }
 
+//https://kotlin.github.io/kotlinx-kover/
 koverReport {
-    filters {
-        excludes {
-            // exclusion rules - classes to exclude from report
-            classes("at.*")
+    verify {
+        rule {
+            minBound(0)
         }
+    }
+    filters {
         includes {
-            // inclusion rules - classes only those that will be present in reports
+            classes("com.tyrell.ReactiveKotlinApplication")
         }
     }
 }

@@ -28,8 +28,8 @@ internal class CatalogueService(
         if (existingPet != null) {
             throw DuplicatePetException("Duplicate pet")
         }
-        val createdPet = petRepository.save(request.toPet()).awaitFirstOrNull()
-        return createdPet!!.toPetCreateResponse()
+        val createdPet = petRepository.save(request.toPet()).awaitFirst()
+        return createdPet.toPetCreateResponse()
     }
 
     suspend fun findPet(petName: String): ResponseEntity<Pet> {
