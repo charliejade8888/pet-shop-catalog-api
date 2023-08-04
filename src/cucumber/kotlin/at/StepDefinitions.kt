@@ -175,7 +175,7 @@ class StepDefinitions {
                 dockerComposeContainer.withLocalCompose(true) // version in testcontainers library v 1.17.5 buggy
                 dockerComposeContainer.start()
                 containerStarted = true
-                Thread.sleep(20000) // workaround for ARM64
+//                Thread.sleep(20000) // workaround for ARM64
             }
             dockerComposeContainer.withRemoveImages(DockerComposeContainer.RemoveImages.ALL)
         }
