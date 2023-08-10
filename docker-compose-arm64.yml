@@ -5,7 +5,7 @@ services:
       context: ./keycloak
       dockerfile: Dockerfile
     network_mode: host
-  myservice:
+  pet-shop-catalog:
     build:
       context: .
       dockerfile: Dockerfile

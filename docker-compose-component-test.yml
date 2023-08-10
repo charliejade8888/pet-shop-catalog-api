@@ -1,15 +1,14 @@
 version: '3.3'
 services:
-  wiremock:
+  keycloak-stub:
     ports:
       - '8180:8080'
       - '12443:8443'
-    container_name: wiremock_demo
     volumes:
-      - './wiremock:/home/wiremock'
+      - './keycloak-stub:/home/wiremock'
     image: 'rodolpheche/wiremock:2.25.1'
     command: "--global-response-templating --verbose"
-  myservice:
+  pet-shop-catalog:
     build:
       context: .
       dockerfile: Dockerfile

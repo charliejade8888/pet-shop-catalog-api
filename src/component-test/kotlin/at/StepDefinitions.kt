@@ -164,8 +164,8 @@ class StepDefinitions {
 
         private val dockerComposeContainer: DockerComposeContainer<*> =
 //            DockerComposeContainer<Nothing>(File("docker-compose-arm64.yml")) // for ARM64 (uses non-bitnami images)
-            DockerComposeContainer<Nothing>(File("docker-compose.yml"))
-                .waitingFor("myservice", HostPortWaitStrategy())
+            DockerComposeContainer<Nothing>(File("docker-compose-component-test.yml"))
+                .waitingFor("pet-shop-catalog", HostPortWaitStrategy())
 
 
         @JvmStatic
