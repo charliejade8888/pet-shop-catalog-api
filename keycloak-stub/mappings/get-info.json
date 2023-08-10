@@ -1,11 +1,11 @@
 {
   "request": {
     "method": "GET",
-    "urlPathPattern": "/realms/petshoprealm"
+    "urlPathPattern": "/realms/petshoprealm/.well-known/openid-configuration"
   },
   "response": {
     "status": 200,
-    "bodyFileName": "petshop-realm.json",
+    "bodyFileName": "get-info.json",
     "headers": {
       "Content-Type": "application/json"
     }

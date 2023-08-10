@@ -1,7 +1,0 @@
-{
-  "realm": "petshoprealm",
-  "public_key": "MIIBIjANBgkqhkiG9w0BAQEFAAOCAQ8AMIIBCgKCAQEAx5WgLPj1R/68DeNJC15Db7wPeix39udsz7gRnclnxdIgJG5+EOwvMMkFBrqgdAQJRHn5yMjzmlDyWRQV5sLRrfCexbm4DfZCEcAefaDuTJl+K5Bxgm4kdCS+8BFoZhmzdN95DvCNLTV+yb94roxJvk5GwzzLBltgp7G4bjG8q49k0UnHCz2iOCKreTBNeeHhlW102xXKi19aaGDdnXNVlEmubQFsbGn+ZWibbav24T0QsTYLM3ooO445k105o4AyAnim+dfVGFLf85jrq+0wpoxlC3CC9emwKnTLfiVzSJpKT8gEOJUF9bpOdfeRz8lAg6LeVutBOfyPWK3LunAKTQIDAQAB",
-  "token-service": "http://localhost:8180/realms/petshoprealm/protocol/openid-connect",
-  "account-service": "http://localhost:8180/realms/petshoprealm/account",
-  "tokens-not-before": 0
-}
