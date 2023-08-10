@@ -82,18 +82,18 @@ val SourceSet.kotlin: SourceDirectorySet
     get() = project.extensions.getByType<KotlinJvmProjectExtension>().sourceSets.getByName(name).kotlin
 
 sourceSets {
-    create("cucumber") {
-        kotlin.srcDirs("src/cucumber")
+    create("component-test") {
+        kotlin.srcDirs("src/component-test")
         compileClasspath += sourceSets["main"].output + configurations["testRuntimeClasspath"]
         runtimeClasspath += output + compileClasspath + sourceSets["test"].runtimeClasspath
     }
 }
 
-val cucumber = task<Test>("cucumber") {
-    description = "Runs the cucumber tests, use -d or -i flag to see output."
+val componentTest = task<Test>("component-test") {
+    description = "Runs the component test, use -d or -i flag to see output."
     group = "verification"
-    testClassesDirs = sourceSets["cucumber"].output.classesDirs
-    classpath = sourceSets["cucumber"].runtimeClasspath
+    testClassesDirs = sourceSets["component-test"].output.classesDirs
+    classpath = sourceSets["component-test"].runtimeClasspath
     useJUnitPlatform()
     dependsOn("assemble")
 }

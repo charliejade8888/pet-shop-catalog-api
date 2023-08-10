@@ -1,0 +1,19 @@
+{
+  "exp": 9999999999,
+  "iat": 1601824511,
+  "jti": "d5a4831d-7236-4686-a17b-784cd8b5805d",
+  "iss": "http://localhost:8083/auth/realms/baeldung",
+  "sub": "a5461470-33eb-4b2d-82d4-b0484e96ad7f",
+  "typ": "Bearer",
+  "azp": "jwtClient",
+  "session_state": "96030af2-1e48-4243-ba0b-dd4980c6e8fd",
+  "preferred_username": "john@test.com",
+  "email_verified": false,
+  "acr": "1",
+  "scope": "profile email read",
+  "DOB": "1984-07-01",
+  "organization": "baeldung",
+  "client_id": "jwtClient",
+  "username": "john@test.com",
+  "active": true
+}

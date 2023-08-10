@@ -1,0 +1,41 @@
+version: '3.3'
+services:
+  wiremock:
+    ports:
+      - '8180:8080'
+      - '12443:8443'
+    container_name: wiremock_demo
+    volumes:
+      - './wiremock:/home/wiremock'
+    image: 'rodolpheche/wiremock:2.25.1'
+    command: "--global-response-templating --verbose"
+  myservice:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    ports:
+      - "127.0.0.1:9000:9000"
+    network_mode: host
+  mariadb:
+    image: 'bitnami/mariadb:latest'
+    labels:
+      kompose.service.type: nodeport
+    ports:
+      - "127.0.0.1:3306:3306"
+    network_mode: host
+    expose:
+      - "3306"
+    volumes:
+      - 'mariadb_data:/bitnami'
+    environment:
+      - MARIADB_USER=testuser
+      - MARIADB_PASSWORD=mypwd
+      # ALLOW_EMPTY_PASSWORD is recommended only for development.
+      - ALLOW_EMPTY_PASSWORD=yes
+      - MARIADB_DATABASE=mydb
+
+volumes:
+  mariadb_data:
+    driver: local
+
+

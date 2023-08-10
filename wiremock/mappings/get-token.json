@@ -1,0 +1,13 @@
+{
+  "request": {
+    "method": "POST",
+    "urlPath": "/realms/petshoprealm/protocol/openid-connect/token"
+  },
+  "response": {
+    "status": 200,
+    "bodyFileName": "get-token.json",
+    "headers": {
+      "Content-Type": "application/json"
+    }
+  }
+}

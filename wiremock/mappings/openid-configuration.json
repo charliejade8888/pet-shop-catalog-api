@@ -1,0 +1,13 @@
+{
+  "request": {
+    "method": "GET",
+    "urlPathPattern": "/auth/realms/.*/.well-known/openid-configuration"
+  },
+  "response": {
+    "status": 200,
+    "bodyFileName": "openid-configuration.json",
+    "headers": {
+      "Content-Type": "application/json"
+    }
+  }
+}
