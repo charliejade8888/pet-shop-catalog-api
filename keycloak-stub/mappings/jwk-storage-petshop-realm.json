@@ -5,7 +5,7 @@
   },
   "response": {
     "status": 200,
-    "bodyFileName": "openid-configuration.json",
+    "bodyFileName": "jwk-storage-petshop-realm.json",
     "headers": {
       "Content-Type": "application/json"
     }

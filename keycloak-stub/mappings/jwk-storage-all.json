@@ -5,9 +5,6 @@
   },
   "response": {
     "status": 200,
-    "bodyFileName": "openid-configuration.json",
-    "headers": {
-      "Content-Type": "application/json"
-    }
+    "body": "nothing to do here!!"
   }
 }
