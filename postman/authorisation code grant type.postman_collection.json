@@ -2,7 +2,7 @@
 	"info": {
 		"_postman_id": "0b0c4b8f-2dfe-4179-baa6-45205afd8835",
 		"name": "authorisation code grant type",
-		"description": "This grant type is used where a user is involved and can enter login credentials.\n\nIt is used where the client/source code is not publicly exposed, just on a private network.\n\nThis is because the client secret is needed here and must be stored in the source code.\n\nThe client must be trusted with the \nclient_secret.",
+		"description": "This grant type is used where a user is involved and can enter login credentials.\n\nIt is used where the client/source code is not publicly exposed, just on a private network.\n\nThis is because the client secret is needed here and must be stored in the source code.\n\nThe client must be trusted with the  \nclient_secret.",
 		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
 		"_exporter_id": "8442851"
 	},

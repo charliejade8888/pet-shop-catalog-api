@@ -1,0 +1,28 @@
+{
+	"info": {
+		"_postman_id": "d81298e3-a2b5-4bfe-bcc6-18ea8b0cf448",
+		"name": "playground",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "8442851"
+	},
+	"item": [
+		{
+			"name": "ping",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "localhost:8180/ping",
+					"host": [
+						"localhost"
+					],
+					"port": "8180",
+					"path": [
+						"ping"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}

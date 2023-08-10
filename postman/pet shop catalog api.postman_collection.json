@@ -1,0 +1,171 @@
+{
+	"info": {
+		"_postman_id": "4fe1547c-bc46-4b31-ac98-0ff5bb31ef2a",
+		"name": "pet shop catalog api",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "8442851"
+	},
+	"item": [
+		{
+			"name": "list pets",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Bearer {{token}}",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "localhost:9000/catalog/list?pageNo=1&pageSize=10",
+					"host": [
+						"localhost"
+					],
+					"port": "9000",
+					"path": [
+						"catalog",
+						"list"
+					],
+					"query": [
+						{
+							"key": "pageNo",
+							"value": "1"
+						},
+						{
+							"key": "pageSize",
+							"value": "10"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "delete",
+			"request": {
+				"method": "DELETE",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Bearer {{token}}",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "localhost:9000/catalog/delete/Nemo",
+					"host": [
+						"localhost"
+					],
+					"port": "9000",
+					"path": [
+						"catalog",
+						"delete",
+						"Nemo"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "get",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Bearer {{token}}",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "localhost:9000/catalog/search?petName=Nemo",
+					"host": [
+						"localhost"
+					],
+					"port": "9000",
+					"path": [
+						"catalog",
+						"search"
+					],
+					"query": [
+						{
+							"key": "petName",
+							"value": "Nemo"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "add pet",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Bearer {{token}}",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\"name\":\"Garfield\",\"description\":\"Likes lasange\",\"type\":\"Cat\",\"breed\":\"Persian Tabby\",\"price\":\"$10\"}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:9000/catalog/add",
+					"host": [
+						"localhost"
+					],
+					"port": "9000",
+					"path": [
+						"catalog",
+						"add"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "update pet",
+			"request": {
+				"method": "PATCH",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Bearer {{token}}",
+						"type": "text"
+					},
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\"price\":\"$100\"}"
+				},
+				"url": {
+					"raw": "localhost:9000/catalog/update/Nemo",
+					"host": [
+						"localhost"
+					],
+					"port": "9000",
+					"path": [
+						"catalog",
+						"update",
+						"Nemo"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
