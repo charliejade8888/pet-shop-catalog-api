@@ -19,4 +19,4 @@ Swagger -
 
 Other -
 * `./gradlew tasks` for full list of tasks available
-* `./gradlew cucumber` for out of process component test (BAT)
+* `./gradlew component-test` for out of process component test (BAT)

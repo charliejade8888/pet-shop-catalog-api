@@ -163,7 +163,7 @@ class StepDefinitions {
         }
 
         private val dockerComposeContainer: DockerComposeContainer<*> =
-//            DockerComposeContainer<Nothing>(File("docker-compose-arm64.yml")) // for ARM64 (uses non-bitnami images)
+            // token in keycloak stub is expires in 4999 days
             DockerComposeContainer<Nothing>(File("docker-compose-component-test.yml"))
                 .waitingFor("pet-shop-catalog", HostPortWaitStrategy())
 
