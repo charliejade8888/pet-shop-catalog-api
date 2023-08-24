@@ -146,8 +146,8 @@ class StepDefinitions {
 
     companion object {
         private var containerStarted: Boolean = false
-        const val client_id = "petshopapi"
-        const val client_secret = "7riSklHZfjhmEGrDFakimD2heGOBImCs"
+        const val client_id = "some_client_id" // petshopapi
+        const val client_secret = "some_client_secret" // 7riSklHZfjhmEGrDFakimD2heGOBImCs
         const val authPath = "http://localhost:8180/realms/petshoprealm/protocol/openid-connect/token"
 
         private fun getToken(): String {
