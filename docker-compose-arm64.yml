@@ -1,10 +1,5 @@
 version: '3.3'
 services:
-  keycloak:
-    build:
-      context: ./keycloak
-      dockerfile: Dockerfile
-    network_mode: host
   pet-shop-catalog:
     build:
       context: .
