@@ -1,1 +1,1 @@
-rootProject.name = "pet-shop-catalog"
+rootProject.name = "pet-shop-catalog-api"
