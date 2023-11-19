@@ -21,3 +21,5 @@ Swagger -
 Other -
 * `./gradlew tasks` for full list of tasks available
 * `./gradlew component-test` for out of process component test (BAT)
+* `./gradlew koverHtmlReport` for test coverage
+* `./gradlew detekt` for static anaylsis, see detekt.yml for config

@@ -26,7 +26,7 @@ class ProjectSecurityConfig {
         return ReactiveJwtDecoders.fromIssuerLocation("http://localhost:8180/realms/petshoprealm");
     }
 
-    @Suppress("MaxLineLength")
+    @Suppress("MaxLineLength") // suppression for detekt
     @Bean
     fun springSecurityFilterChain(http: ServerHttpSecurity): SecurityWebFilterChain? {
         http.authorizeExchange()
