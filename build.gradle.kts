@@ -74,9 +74,9 @@ tasks.withType<KotlinCompile> {
     }
 }
 
-tasks.withType<Test> {
-    useJUnitPlatform()
-}
+//tasks.withType<Test> {
+//    useJUnitPlatform()
+//}
 
 val SourceSet.kotlin: SourceDirectorySet
     get() = project.extensions.getByType<KotlinJvmProjectExtension>().sourceSets.getByName(name).kotlin
@@ -94,7 +94,7 @@ val componentTest = task<Test>("component-test") {
     group = "verification"
     testClassesDirs = sourceSets["component-test"].output.classesDirs
     classpath = sourceSets["component-test"].runtimeClasspath
-    useJUnitPlatform()
+//    useJUnitPlatform()
     dependsOn("assemble")
 }
 
