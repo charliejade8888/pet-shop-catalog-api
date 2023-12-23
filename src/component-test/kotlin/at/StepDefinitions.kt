@@ -123,7 +123,7 @@ class StepDefinitions {
     @Then("no pet should be added")
     fun no_pet_should_be_added() {
         assertThat(lastResponse.body().asString()).isEqualTo("Duplicate pet")
-        assertThat(lastResponse.statusCode).isEqualTo(HttpStatus.INTERNAL_SERVER_ERROR.value())
+        assertThat(lastResponse.statusCode).isEqualTo(HttpStatus.INTERNAL_SERVER_ERROR.value()) // TODO change to 400
     }
 
     @Then("no pet {string} should be deleted")
