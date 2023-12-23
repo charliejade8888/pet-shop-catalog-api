@@ -12,7 +12,8 @@ import org.springframework.data.relational.core.mapping.Table
 data class Pet(
     @Id
     var id: Int? = null,
-    @NotNull
+    @NotNull // for how to use this along with @Valid see -
+    // https://medium.com/@himani.prasad016/validations-in-spring-boot-e9948aa6286b#:~:text=13.,that%20it%20should%20be%20validated.
     val name: String,
     var description: String,
     val type: String,

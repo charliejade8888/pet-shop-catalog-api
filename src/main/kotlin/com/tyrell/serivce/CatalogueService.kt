@@ -63,6 +63,7 @@ internal class CatalogueService(
         }
         // subscribe is async, we know it exists, so we can safely now delete async for speed!
         // block on the other hand is synchronous (blocking)
+        // await is neither (reactive) i.e. can be suspended/resumed later to optimise app performance
         petRepository.delete(existingPet).subscribe()
     }
 
