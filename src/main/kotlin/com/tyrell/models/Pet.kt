@@ -18,6 +18,8 @@ data class Pet(
     val type: String,
     var price: String,
     val breed: String)
+// gradle source set (component-test) is automatically regarded as a seperate module and cannot access internal assests of another source set
+// https://kotlinlang.org/docs/visibility-modifiers.html#modules
 internal fun Pet.toPetCreateResponse(): PetCreateResponse = PetCreateResponse(
     id = id,
     name = name,
