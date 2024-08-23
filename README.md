@@ -1,5 +1,7 @@
 # Pet Shop Catalog
-Reactive programming in Kotlin. CRUD REST API, Spring WebFlux and R2DBC.
+Reactive programming in Kotlin. 
+CRUD REST API, Spring WebFlux and R2DBC.<br>
+OAUTH2 with Keycloak, see [Spring Security 6 Zero to Master along with JWT,OAUTH2](https://www.udemy.com/course/spring-security-zero-to-master/?couponCode=SKILLS4SALEA)
 
 To start -
 * `docker-compose up` in pet-shop-auth project
@@ -20,6 +22,6 @@ Swagger -
 
 Other -
 * `./gradlew tasks` for full list of tasks available
-* `./gradlew clean component-test -i` for out of process component test (BAT)
+* `./gradlew component-test` for out of process component test (BAT)
 * `./gradlew koverHtmlReport` for test coverage
 * `./gradlew detekt` for static anaylsis, see detekt.yml for config

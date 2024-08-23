@@ -1,5 +1,6 @@
 import org.jetbrains.kotlin.gradle.dsl.KotlinJvmProjectExtension
 import org.jetbrains.kotlin.gradle.tasks.KotlinCompile
+import sun.jvmstat.monitor.MonitoredVmUtil.commandLine
 
 plugins {
     id("org.jetbrains.kotlinx.kover") version "0.7.3"
@@ -90,7 +91,7 @@ sourceSets {
 }
 
 val componentTest = task<Test>("component-test") {
-    description = "Runs the component test, use -d or -i flag to see output."
+    description = "Runs the component test, use clean or --rerun-tasks to re-run, use -d or -i flag to see output"
     group = "verification"
     testClassesDirs = sourceSets["component-test"].output.classesDirs
     classpath = sourceSets["component-test"].runtimeClasspath
