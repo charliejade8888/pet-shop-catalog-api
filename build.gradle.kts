@@ -1,6 +1,5 @@
 import org.jetbrains.kotlin.gradle.dsl.KotlinJvmProjectExtension
 import org.jetbrains.kotlin.gradle.tasks.KotlinCompile
-import sun.jvmstat.monitor.MonitoredVmUtil.commandLine
 
 plugins {
     id("org.jetbrains.kotlinx.kover") version "0.7.3"
