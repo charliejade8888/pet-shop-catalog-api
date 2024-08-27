@@ -1,7 +1,7 @@
 # Pet Shop Catalog
 Reactive programming in Kotlin. 
 CRUD REST API, Spring WebFlux and R2DBC.<br>
-OAUTH2 with Keycloak, see [Spring Security 6 Zero to Master along with JWT,OAUTH2](https://www.udemy.com/course/spring-security-zero-to-master/?couponCode=SKILLS4SALEA)
+OAUTH2 with Keycloak, see [Spring Security 6 Zero to Master along with JWT,OAUTH2](https://www.udemy.com/course/spring-security-zero-to-master/?couponCode=SKILLS4SALEA) _sections 13, 14, 15, and 16_
 
 To start -
 * `docker-compose up` in pet-shop-auth project
