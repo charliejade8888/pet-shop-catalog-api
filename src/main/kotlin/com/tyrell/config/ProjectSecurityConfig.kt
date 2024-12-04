@@ -22,37 +22,44 @@ import reactor.core.publisher.Mono
 class ProjectSecurityConfig {
 
     @Bean
-    fun jwtDecoder(): ReactiveJwtDecoder? {
-        return ReactiveJwtDecoders.fromIssuerLocation("http://localhost:8180/realms/petshoprealm");
+    fun jwtDecoder(): ReactiveJwtDecoder {
+        return ReactiveJwtDecoders.fromIssuerLocation("http://localhost:8180/realms/petshoprealm")
     }
 
-    @Suppress("MaxLineLength") // suppression for detekt
     @Bean
-    fun springSecurityFilterChain(http: ServerHttpSecurity): SecurityWebFilterChain? {
-        http.authorizeExchange()
-            .pathMatchers("/catalog/delete/**").hasAnyRole("USER")
-            .pathMatchers("/catalog/add/**").permitAll()
-            .pathMatchers("/webjars/swagger-ui/**", "/v3/api-docs.yaml", "/v3/api-docs", "/v3/api-docs/swagger-config").permitAll()
-            .pathMatchers("/swagger-ui.html").permitAll()
-            .pathMatchers("/actuator/**").permitAll()
-            .pathMatchers("/catalog/update/**").permitAll()
-            .pathMatchers("/catalog/search/**").authenticated()
-            .pathMatchers("/catalog/list/**").hasAnyRole("USER", "ADMIN")
-            .and()
-            .csrf()
-            .disable()
-            .oauth2ResourceServer().jwt().jwtAuthenticationConverter(grantedAuthoritiesExtractor());
-        return http.build()
+    fun springSecurityFilterChain(http: ServerHttpSecurity): SecurityWebFilterChain {
+        return http
+            .authorizeExchange { exchanges ->
+                exchanges
+                    .pathMatchers("/catalog/delete/**").hasRole("USER")
+                    .pathMatchers("/catalog/add/**").permitAll()
+                    .pathMatchers(
+                        "/webjars/swagger-ui/**",
+                        "/v3/api-docs.yaml",
+                        "/v3/api-docs",
+                        "/v3/api-docs/swagger-config"
+                    ).permitAll()
+                    .pathMatchers("/swagger-ui.html").permitAll()
+                    .pathMatchers("/actuator/**").permitAll()
+                    .pathMatchers("/catalog/update/**").permitAll()
+                    .pathMatchers("/catalog/search/**").authenticated()
+                    .pathMatchers("/catalog/list/**").hasAnyRole("USER", "ADMIN")
+            }
+            .csrf { csrf -> csrf.disable() }
+            .oauth2ResourceServer { oauth2 ->
+                oauth2.jwt { jwt -> jwt.jwtAuthenticationConverter(grantedAuthoritiesExtractor()) }
+            }
+            .build()
     }
 
-    fun grantedAuthoritiesExtractor(): Converter<Jwt?, Mono<AbstractAuthenticationToken?>?>? {
+    fun grantedAuthoritiesExtractor(): Converter<Jwt?, Mono<AbstractAuthenticationToken?>> {
         val jwtAuthenticationConverter = JwtAuthenticationConverter()
         jwtAuthenticationConverter.setJwtGrantedAuthoritiesConverter(KeycloakRoleConverter())
         return ReactiveJwtAuthenticationConverterAdapter(jwtAuthenticationConverter)
     }
 
     @Bean
-    fun corsConfigurationSource(): CorsConfigurationSource? {
+    fun corsConfigurationSource(): CorsConfigurationSource {
         val configuration = CorsConfiguration()
         configuration.allowedOrigins = listOf("http://localhost:4200")
         configuration.addAllowedHeader("*")
