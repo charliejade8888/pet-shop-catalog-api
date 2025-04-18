@@ -9,7 +9,7 @@ plugins {
     kotlin("plugin.spring") version "1.9.22"
     kotlin("jvm") version "1.9.22"
 }
-// TODO comment out kover/detekt, fix the rest then start from scratch via google/their docs!! - run build/boot first to find failure
+// TODO go back to prev commit comment out kover/detekt, fix the rest then start from scratch via google/their docs!! - run build/boot first to find failure
 group = "com.tyrell"
 version = "0.0.1-SNAPSHOT"
 java.sourceCompatibility = JavaVersion.VERSION_17
